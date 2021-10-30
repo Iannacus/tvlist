@@ -1,0 +1,10 @@
+.logo {
+  color: rgba(235,49,90,1);
+  text-shadow: 2px 2px 30px rgba(235,49,90,0.7);
+  font-size: 32px;
+  margin-top: 0;
+}
+
+.logo span {
+  font-size: 48px;
+}

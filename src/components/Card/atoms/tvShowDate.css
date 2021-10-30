@@ -1,0 +1,23 @@
+.premiered-container {
+  color: #FFF;
+  width: 150px;
+  height: 150px;
+  background: linear-gradient(146deg, rgba(241,152,25,1) 0%, rgba(241,152,25,1) 0%, rgba(235,49,90,1) 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+}
+
+.month-label{
+  font-size: 16px;
+}
+
+.day-label{
+  font-size:32px;
+}
+
+.year-label{
+  font-size: 36px;
+}
