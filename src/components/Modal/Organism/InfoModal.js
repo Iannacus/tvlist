@@ -43,7 +43,7 @@ const InfoModal = ({id, favorite, handleFavorite}) => {
           <InfoSection 
             title={name} 
             description={summary} 
-            alification={rating.average} 
+            calification={rating.average} 
             links={externals}
             
           />
