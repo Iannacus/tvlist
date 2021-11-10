@@ -22,6 +22,7 @@ function ShowsList() {
 
   const renderTvShows = shows.map( (show, i) => {
     const {name, image, premiered, id, rating, summary} = {...show};
+    console.log(id)
     if(favorites.findIndex(element => element.id === id) >= 0){
        fav = true;
     }else{

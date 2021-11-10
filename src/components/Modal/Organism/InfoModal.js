@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import InfoSection from '../molecules/InfoSection';
 import DeleteSection from '../molecules/deleteSection/DeleteSection';
 import PosterSection from '../molecules/cover/PosterSection';
@@ -6,6 +6,8 @@ import './InfoModal.css';
 import { useSelector, useDispatch } from 'react-redux';
 import { closeModal } from '../../../actions/modalActions';
 import { cancelRequest } from '../../../actions/favoriteActions';
+import CastSection from '../molecules/castSection/CastSection';
+import { getCast } from '../../../actions/castActions';
 
 const InfoModal = ({id, favorite, handleFavorite}) => {
 
@@ -18,6 +20,12 @@ const InfoModal = ({id, favorite, handleFavorite}) => {
     dispatch(cancelRequest());
     dispatch(closeModal())
   }
+
+  useEffect(() => {
+    dispatch(getCast(`https://api.tvmaze.com/shows/${id}/cast`));
+  }, []);
+
+
 
   return(
     <div className='modal-layout'>
@@ -40,6 +48,7 @@ const InfoModal = ({id, favorite, handleFavorite}) => {
       </div>
       <div className='modal-section'>
         {!request ? 
+        <>
           <InfoSection 
             title={name} 
             description={summary} 
@@ -47,6 +56,8 @@ const InfoModal = ({id, favorite, handleFavorite}) => {
             links={externals}
             
           />
+          <CastSection />
+          </>
           :
           <DeleteSection title={name} id={id} />
         }
