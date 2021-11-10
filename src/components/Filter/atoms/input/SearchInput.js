@@ -19,7 +19,7 @@ const SearchInput = () => {
   useEffect(() => {
     dispatch(setFlagFavorites(false));
     dispatch(fetchCustomMovies(searchTerm));
-  }, [searchTerm])
+  }, [searchTerm, dispatch])
 
   return (
     <input 

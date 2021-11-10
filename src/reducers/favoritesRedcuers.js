@@ -45,6 +45,7 @@ export const favoriteReducer = ( state = initialState, action ) => {
 
       if(index >= 0){
         const deleted = stateCopy.splice(index, 1);
+        console.log(deleted);
       }
       return {...state,
          showList: [...stateCopy],
