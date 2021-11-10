@@ -35,7 +35,7 @@ const TvShowCard = ({image, name, date, id, fav, disabled}) => {
     if(fav){
       setFavorite(true);
     }
-  });
+  }, [fav]);
 
   useEffect(() => {
     if(confirm) {
