@@ -9,10 +9,12 @@ const SearchInput = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const dispatch = useDispatch();
   const url = 'https://api.tvmaze.com/search/shows?q='
+
   const handleSearch = (e) => {
     if(e.key === 'Enter'){
       if(e.target.value.trim() !== '')
-        setSearchTerm(`${url}${e.target.value}`)
+        setSearchTerm(`${url}${e.target.value}`);
+      e.target.value = ''
     }
   }
 
