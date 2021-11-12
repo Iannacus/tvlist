@@ -3,9 +3,13 @@ import './PeopleCastImg.css'
 
 const PeopleCastImg = ({img, actorName}) => {
   return (
-    <div className = 'people-cast'>
-      <img src={img} alt={actorName} />
+    <div className='tooltip'>
+      <span className= 'tooltiptext'>{actorName}</span>
+      <div className = 'people-cast'>
+        <img src={img} alt={actorName} />
+      </div>
     </div>
+    
   )
 }
 
