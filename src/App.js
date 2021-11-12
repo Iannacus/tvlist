@@ -17,7 +17,7 @@ function App() {
 
 
   return (
-    <div className='main-container'>
+    <div className='main-container' onKeyDown={(e) => console.log(e)} tabIndex='-1'>
       <Filter />
       {loader ? <Spinner /> : <ShowsList />}
     </div>
