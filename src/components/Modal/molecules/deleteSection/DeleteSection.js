@@ -26,11 +26,11 @@ const DeleteSection = ({title, id}) => {
   return (
     <div className="info-container">
       <ModalTitle links={{}}>{title}</ModalTitle>
-      <Text fontS={32} color={'rgba(235,49,90,1)'}>Esta a punto de eliminar de favoritos este título</Text>
-      <Text fontS={32} color={'rgba(235,49,90,1)'}>¿Esta Seguro?</Text>
+      <Text fontS={32} color={'rgba(235,49,90,1)'}>Do you want to delete {title} from your favorite list?</Text>
+      <Text fontS={32} color={'rgba(235,49,90,1)'}>Click accept to delete</Text>
       <div className='buton-container'>
-        <Button textValue={'Aceptar'} clickAction={handleConfirm}/>
-        <Button textValue={'cancelar'} clickAction={handleCancel}/>
+        <Button textValue={'Accpet'} clickAction={handleConfirm}/>
+        <Button textValue={'Cancel'} clickAction={handleCancel}/>
       </div>
       
     </div>
