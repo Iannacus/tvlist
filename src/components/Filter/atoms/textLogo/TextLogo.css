@@ -5,6 +5,10 @@
   margin-top: 0;
 }
 
+.logo:hover {
+  cursor: pointer;
+}
+
 .logo span {
   font-size: 48px;
 }
