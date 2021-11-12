@@ -8,7 +8,9 @@ const CastSection = () => {
   const cast = useSelector(state => state.castReducer.cast);
   return(
     <div>
-      <h3>Cast</h3>
+      {cast.length > 0 ? 
+        <h3>Cast</h3> : <h3>Cast not found</h3>
+      }
       <div className='cast-persons'>
         { cast.length > 0 ?
           cast.slice(0,7).map((caster, i) => {
