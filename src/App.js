@@ -5,6 +5,7 @@ import ShowsList from './components/ShowList';
 import Filter from './components/Filter/Filter';
 import Spinner from './components/spinner/atoms/Spinner';
 import './App.css';
+import { closeModal } from './actions/modalActions';
 
 function App() {
   const dispatch = useDispatch();
@@ -14,10 +15,14 @@ function App() {
     dispatch(fetchMovies('https://api.tvmaze.com/shows?page=3'));
   }, [dispatch]);
 
-
+  const handleEscape = (e) => {
+    if(e.key === 'Escape') {
+      dispatch(closeModal());
+    }
+  }
 
   return (
-    <div className='main-container' onKeyDown={(e) => console.log(e)} tabIndex='-1'>
+    <div className='main-container' onKeyDown={(e) => handleEscape(e)} tabIndex='0'>
       <Filter />
       {loader ? <Spinner /> : <ShowsList />}
     </div>
