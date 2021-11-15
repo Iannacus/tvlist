@@ -1,0 +1,18 @@
+.pagination-element {
+  background-color: #eb315a;
+  color: #FFF;
+  padding: 5px 7px;
+  border-radius: 3px;
+  transition: 0.3s;
+}
+
+.pagination-element:hover {
+  background-color: #FFF;
+  color: #eb315a;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.pagination-element p{
+  margin: 0;
+}

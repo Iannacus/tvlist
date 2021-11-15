@@ -6,6 +6,7 @@ import Filter from './components/Filter/Filter';
 import Spinner from './components/spinner/atoms/Spinner';
 import './App.css';
 import { closeModal } from './actions/modalActions';
+import PaginationSection from './components/pagination/organism/PaginationSection';
 
 function App() {
   const dispatch = useDispatch();
@@ -24,6 +25,7 @@ function App() {
   return (
     <div className='main-container' onKeyDown={(e) => handleEscape(e)} tabIndex='0'>
       <Filter />
+      <PaginationSection />
       {loader ? <Spinner /> : <ShowsList />}
     </div>
   );

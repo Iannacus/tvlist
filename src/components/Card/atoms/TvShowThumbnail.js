@@ -2,7 +2,7 @@ import React from 'react';
 
 const TvShowThumbnail = ({image, name}) => {
   return(
-    <img src={image} alt={`${name} tv show`} style={{width: '60%'}}/>
+    <img loading='lazy' src={image} alt={`${name} tv show`} style={{width: '60%'}}/>
   )
 }
 

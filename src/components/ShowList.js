@@ -42,8 +42,12 @@ function ShowsList() {
     )
   }); 
 
+  const handleScroll = (e) => {
+    console.log(e.target)
+  }
+
   return(
-    <div className='list-container'>
+    <div className='list-container' onScroll={(e) => handleScroll(e)}>
       {view ? 
         renderTvShows
         :
